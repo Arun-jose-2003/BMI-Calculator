@@ -90,18 +90,18 @@ button:hover {
 .meter {
     position: relative;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px; /* Increased max-width for larger screens */
     height: 150px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 20px auto; /* Centering */
 }
 
 .needle {
     position: absolute;
-    bottom: 47px;
+    bottom: 50px; /* Adjusted for better visibility */
     width: 4px;
     height: 90px;
     background: red;
@@ -126,6 +126,7 @@ button:hover {
     text-align: center;
 }
 
+/* Colors */
 .underweight {
     color: #ffffff;
 }
@@ -142,23 +143,17 @@ button:hover {
     color: #ffffff;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 1024px) {
-    .container {
-        padding: 15px;
-    }
+/* Media Queries for Large Smartphones and Laptops */
 
-    .input-group {
-        margin-bottom: 10px;
+/* Large Smartphones */
+@media (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
     }
 
     .input-group input,
     .input-group select {
         font-size: 15px;
-    }
-
-    button {
-        padding: 12px;
     }
 
     .result {
@@ -170,57 +165,76 @@ button:hover {
     }
 
     .needle {
-        height: 70px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    .input-group input,
-    .input-group select {
-        font-size: 14px;
+        height: 65px;
+        bottom: 45px; /* Adjusted for better fit */
     }
 
     button {
-        padding: 10px;
-    }
-
-    .result {
+        padding: 12px;
         font-size: 15px;
-    }
-
-    .meter {
-        height: 110px;
-    }
-
-    .needle {
-        height: 60px;
     }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 22px;
+/* Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+        max-width: 80%;
     }
 
     .input-group input,
     .input-group select {
-        font-size: 13px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
     }
 
     .result {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .meter {
-        height: 100px;
+        height: 140px;
+        max-width: 350px; /* Adjusted for larger screens */
     }
 
     .needle {
-        height: 50px;
-        bottom: 30px;
+        height: 80px;
+        bottom: 50px; /* Adjusted for better fit */
+    }
+}
+
+/* Large Laptops and Desktops */
+@media (min-width: 1025px) {
+    .container {
+        padding: 20px;
+        max-width: 70%;
+    }
+
+    .input-group input,
+    .input-group select {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+
+    .result {
+        font-size: 20px;
+    }
+
+    .meter {
+        height: 150px;
+        max-width: 400px; /* Further adjust for larger screens */
+    }
+
+    .needle {
+        height: 90px;
+        bottom: 55px; /* Adjusted for better fit */
     }
 }
