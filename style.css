@@ -91,13 +91,13 @@ button:hover {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* Align items to the bottom */
     margin-bottom: 20px;
 }
 
 .needle {
     position: absolute;
-    bottom: 10%;
+    bottom: 0; /* Align needle to the bottom */
     width: 4px;
     height: 60%;
     background: red;
@@ -170,6 +170,7 @@ button:hover {
 
     .needle {
         height: 50%;
+        bottom: 30%;
     }
 }
 
@@ -194,5 +195,6 @@ button:hover {
 
     .needle {
         height: 40%;
+        bottom: 31.5%;
     }
 }
