@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/meter.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="input-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" value="25" min="2" max="120">
+        </div>
+        <div class="input-group">
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" placeholder="Enter height in cm">
+        </div>
+        <div class="input-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+        </div>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="meter">
+            <div class="needle" id="needle">
+                <div class="needle-circle"></div>
+
+            </div>
+
+            <img width="100%" height="100%" src="./images/meter.png" alt="">
+
+        </div>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
